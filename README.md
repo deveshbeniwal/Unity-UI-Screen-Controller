@@ -54,6 +54,7 @@ You can download and install this with different methods given below:
 
 <!-- Contact-->
 # Contact
+Email: devbeniwal80@gmail.com
 [LinkedIn][linkedin-url]
 
 
