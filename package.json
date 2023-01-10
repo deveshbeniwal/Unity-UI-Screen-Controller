@@ -1,0 +1,9 @@
+{
+  "name": "com.deveshbeniwal.unityuiscreencontroller",
+  "displayName": "Unity UI Screen Controller",
+  "version": "1.0.0",
+  "documentationUrl": "https://github.com/deveshbeniwal/Unity-UI-Screen-Controller",
+  "changelogUrl": "https://github.com/deveshbeniwal/Unity-UI-Screen-Controller/releases",
+  "licensesUrl": "https://github.com/deveshbeniwal/Unity-UI-Screen-Controller/blob/13f4492c0834a744f038ab97c4d428d63e02756b/LICENSE",
+  "description": "This plugin helps you handle UI screens and its flow to your Unity GAME OR APP"
+}
