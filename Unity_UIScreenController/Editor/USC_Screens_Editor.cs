@@ -56,6 +56,9 @@ namespace UnityDev_Devesh.UI_Screen_Controller
 
             if (GUILayout.Button("Update"))
                 CheckAndUpdateScreens();
+
+            if (GUILayout.Button("Add/Update UI Screen Manager"))
+                AddOrUpdate_ScreenManager();
         }
 
 
@@ -78,6 +81,17 @@ namespace UnityDev_Devesh.UI_Screen_Controller
 
                 AssetDatabase.Refresh();
             }
+        }
+        private void AddOrUpdate_ScreenManager()
+        {
+            USC_ScreenManager manager = GameObject.FindObjectOfType<USC_ScreenManager>();
+            if(manager == null) 
+            {
+                GameObject controller_obj = new GameObject("--[ UI_Screen_Manager ]--");
+                manager = controller_obj.AddComponent<USC_ScreenManager>();
+            }
+
+            manager.RefreshAssets();
         }
 
         private async Task Save_Json()

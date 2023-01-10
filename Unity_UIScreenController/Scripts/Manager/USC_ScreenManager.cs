@@ -30,6 +30,10 @@ namespace UnityDev_Devesh.UI_Screen_Controller
         }
 
 
+        public void RefreshAssets()
+        {
+            allScreens = GameObject.FindObjectsOfType<USC_BaseScreen>();
+        }
         public void Process_FirstScreen()
         {
             Show(firstScreen);
