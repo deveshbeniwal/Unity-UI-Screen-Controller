@@ -160,7 +160,7 @@ namespace UnityDev_Devesh.UI_Screen_Controller
             await outfile.WriteLineAsync("\t{");
 
             foreach (var item in all_screens)
-                await outfile.WriteLineAsync("\t\t" + item);
+                await outfile.WriteLineAsync("\t\t" + item + ",");
 
             await outfile.WriteLineAsync("\t}");
             await outfile.WriteLineAsync("}");
