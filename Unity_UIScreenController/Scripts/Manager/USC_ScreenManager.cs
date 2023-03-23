@@ -21,12 +21,18 @@ namespace UnityDev_Devesh.UI_Screen_Controller
 
         [SerializeField] USC_BaseScreen[] allScreens;
         [SerializeField] USC_SCREENS firstScreen;
+        
+        [Space]
+        [SerializeField] bool autoProcess_FirstScreen;
 
 
         private void Awake()
         {
             foreach (var item in allScreens)
                 item.Initialize();
+                
+            if (autoProcess_FirstScreen)
+                Process_FirstScreen();
         }
 
 
