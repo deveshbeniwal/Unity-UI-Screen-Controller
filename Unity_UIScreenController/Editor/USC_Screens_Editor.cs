@@ -71,14 +71,14 @@ namespace UnityDev_Devesh.UI_Screen_Controller
                 string filename = "Screen_" + item;
                 string path = string.Format("{0}/{1}.cs", Screen_FolderPath, filename);
 
-                if (File.Exists(path))
-                    return;
+                if (!File.Exists(path))
+                {
+                    await Save_Json();
+                    await Create_Class(filename, path);
+                    await Update_Enum();
 
-                await Save_Json();
-                await Create_Class(filename, path);
-                await Update_Enum();
-
-                AssetDatabase.Refresh();
+                    AssetDatabase.Refresh();
+                }
             }
         }
         private void AddOrUpdate_ScreenManager()
